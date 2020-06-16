@@ -13,15 +13,25 @@
 }
 
 /* main code app  */
+
 .wrapper {
-    background-image: url(../img/index.jpg);
-    background-size: cover;
+    height: 100vh;
+    background-color: black;
+}
+
+.wrapper-app {
+    display: flex;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .sidebar {
     background-color: red;
     width: 300px;
-    height: 100vh;
+    height: 95vh;
     float: left;
 }
 
@@ -37,7 +47,7 @@
 }
 
 .sidebar .contacts {
-    height: calc(100vh - 140px);
+    height: calc(95vh - 140px);
     background-color: grey;
     /* non mette la barra se non devi scrollare */
     overflow-y: auto; 
@@ -46,12 +56,12 @@
 .content {
     background-color: blue;
     width: calc(100% - 300px);
-    height: 100vh;
+    height: 95vh;
     float: left;
 }
 
 .content .chat {
-    height: calc(100vh - 140px);
+    height: calc(95vh - 140px);
     background-color: yellow;
     /* anche questa barra dovrà scrollare  */
     overflow-y: auto;
@@ -61,5 +71,6 @@
     height: 70px;
     background-color: red;
 }
+
 
 
