@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 /* clearfix */
 .clearfix::after {
     clear: both;
@@ -16,7 +20,7 @@
 
 .wrapper {
     height: 100vh;
-    background-color: black;
+    background: linear-gradient(180deg, #009688 15%, #d8dbd5 15%);
 }
 
 .wrapper-app {
@@ -30,46 +34,57 @@
 
 .sidebar {
     background-color: red;
-    width: 300px;
+    width: 350px;
     height: 95vh;
     float: left;
 }
 
-.sidebar .header,
-.content .header {
+.sidebar > .header {
     height: 70px;
-    background-color: orange;
+    background-color: #eaeaea;
+    border-right: 1px solid #d6d6d6;
 }
 
-.sidebar .advise {
-    background-color: aqua;
-    height: 70px;
+.sidebar > .advise {
+    background-color: #8edafc;
+    color: #2b424c;
+    height: 90px;
+    
+}
+
+.sidebar > .search {
+    background-color: #fafafa;
+    height: 60px;
 }
 
 .sidebar .contacts {
-    height: calc(95vh - 140px);
+    height: calc(95vh - 220px);
     background-color: grey;
     /* non mette la barra se non devi scrollare */
     overflow-y: auto; 
 }
 
 .content {
-    background-color: blue;
-    width: calc(100% - 300px);
+    width: calc(100% - 350px);
     height: 95vh;
     float: left;
 }
 
+.content > .header {
+    height: 70px;
+    background-color: #eaeaea;
+}
+
 .content .chat {
     height: calc(95vh - 140px);
-    background-color: yellow;
+    background-image: url(../img/wallpaper.jpg);
     /* anche questa barra dovrà scrollare  */
     overflow-y: auto;
 }
 
-.content .message{
+.content .message {
     height: 70px;
-    background-color: red;
+    background-color:#f3eeea;
 }
 
 
