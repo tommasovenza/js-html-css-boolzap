@@ -145,6 +145,22 @@ img {
 .content > .header {
     height: 70px;
     background-color: #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.content .header img {
+    width: 50px;
+    border-radius: 100%;
+}
+
+.content .text-header {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-left: 20px;
 }
 /* la chat */
 .content .chat {
