@@ -178,12 +178,23 @@ img {
     align-items: center;
 }
 
+.content .message i {
+    font-size: 22px;
+    color: #757575;
+}
+
 .content .message .area-message {
     width: calc(100% - 200px);
     height: 60%;
     color: #757575;
     border-radius: 5px;
     background-color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.content .message .area-message span {
+    margin-left: 20px;
 }
 
 
