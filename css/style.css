@@ -98,20 +98,26 @@ img {
     height: 60px;
     padding: 15px;
 }
-
 .search i {
     color: #b6b9bb;
     font-size: 18px;
     vertical-align: middle;
     margin-left: 10px;
 }
-
 .search span {
     font-size: 14px;
     color: #757575;
     margin-left: 10px;
 }
+.sidebar img {
+    width: 50px;
+    border-radius: 100%;
+}
 
+.sidebar li:last-child {
+    margin: 0;
+}
+/* search */
 .search .campo-search {
     display: inline-block;
     background-color: #fff;
@@ -124,15 +130,26 @@ img {
     background-color: grey;
     /* non mette la barra se non devi scrollare */
     overflow-y: auto; 
+    font-size: 15px;
+    color: #000;
 }
 
-.sidebar img {
-    width: 50px;
-    border-radius: 100%;
+.sidebar .contacts .wrapper-contacts {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #e9ebeb;
 }
 
-.sidebar li:last-child {
-    margin: 0;
+.contacts-text {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.ot-color {
+    color: #bcbfc1;
 }
 
 /* main content */
@@ -150,6 +167,15 @@ img {
     align-items: center;
     padding: 20px;
 }
+/* TODO: questa sezione ho scritto velocemente */
+.content i {
+    font-size: 20px;
+}
+
+.text-small {
+    font-size: 14px;
+}
+/* TODO: da rivedere perchè scritta velocemente e buttata là */
 
 .content .header img {
     width: 50px;
