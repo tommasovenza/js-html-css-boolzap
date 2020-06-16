@@ -1,0 +1,65 @@
+/*  reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* clearfix */
+.clearfix::after {
+    clear: both;
+    content: '';
+    display: table;
+}
+
+/* main code app  */
+.wrapper {
+    background-image: url(../img/index.jpg);
+    background-size: cover;
+}
+
+.sidebar {
+    background-color: red;
+    width: 300px;
+    height: 100vh;
+    float: left;
+}
+
+.sidebar .header,
+.content .header {
+    height: 70px;
+    background-color: orange;
+}
+
+.sidebar .advise {
+    background-color: aqua;
+    height: 70px;
+}
+
+.sidebar .contacts {
+    height: calc(100vh - 140px);
+    background-color: grey;
+    /* non mette la barra se non devi scrollare */
+    overflow-y: auto; 
+}
+
+.content {
+    background-color: blue;
+    width: calc(100% - 300px);
+    height: 100vh;
+    float: left;
+}
+
+.content .chat {
+    height: calc(100vh - 140px);
+    background-color: yellow;
+    /* anche questa barra dovrà scrollare  */
+    overflow-y: auto;
+}
+
+.content .message{
+    height: 70px;
+    background-color: red;
+}
+
+
