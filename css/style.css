@@ -17,12 +17,10 @@ body {
 }
 
 /* main code app  */
-
 .wrapper {
     height: 100vh;
     background: linear-gradient(180deg, #009688 15%, #d8dbd5 15%);
 }
-
 .wrapper-app {
     display: flex;
     width: 90%;
@@ -32,31 +30,31 @@ body {
     align-items: center;
 }
 
+/* barra laterale a sinistra con i contatti */
 .sidebar {
     background-color: red;
     width: 350px;
     height: 95vh;
     float: left;
 }
-
+/* sezione header della sidebar */
 .sidebar > .header {
     height: 70px;
     background-color: #eaeaea;
     border-right: 1px solid #d6d6d6;
 }
-
+/* sezione notifiche azzurra */
 .sidebar > .advise {
     background-color: #8edafc;
     color: #2b424c;
     height: 90px;
-    
 }
-
+/* search bar */
 .sidebar > .search {
     background-color: #fafafa;
     height: 60px;
 }
-
+/* i contatti! */
 .sidebar .contacts {
     height: calc(95vh - 220px);
     background-color: grey;
@@ -64,24 +62,25 @@ body {
     overflow-y: auto; 
 }
 
+/* main content */
 .content {
     width: calc(100% - 350px);
     height: 95vh;
     float: left;
 }
-
+/* main header */
 .content > .header {
     height: 70px;
     background-color: #eaeaea;
 }
-
+/* la chat */
 .content .chat {
     height: calc(95vh - 140px);
     background-image: url(../img/wallpaper.jpg);
     /* anche questa barra dovrà scrollare  */
     overflow-y: auto;
 }
-
+/* barra in basso con invio messaggi */
 .content .message {
     height: 70px;
     background-color:#f3eeea;
