@@ -13,6 +13,9 @@ ul li {
     list-style-type: none;
     display: inline-block;
     margin-right: 10px;
+}
+
+a {
     color: #b1b1b1;
 }
 
@@ -57,12 +60,37 @@ img {
     justify-content: space-between;
     align-items: center;
     font-size: 20px;
+    padding: 0 10px;
 }
 /* sezione notifiche azzurra */
 .sidebar > .advise {
     background-color: #8edafc;
     color: #2b424c;
     height: 90px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.bell {
+    color: #8edafc;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.advise a {
+    color: #4f7485;
+    font-size: 13px;
+}
+
+.text {
+    margin-left: 10px;
+    font-size: 15px;
 }
 /* search bar */
 .sidebar > .search {
