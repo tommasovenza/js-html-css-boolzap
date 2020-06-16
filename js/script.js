@@ -2,8 +2,10 @@ $(document).ready(function () {
 
     $('#btn').click(function (event) {
 
+        
         // al click della tasto microfono(per ora), fa comparire la risposta in verde presa da citazioni varie
 
+        // con set timeout faccio rispondere dopo 3 secondi, ovvero faccio apparire il balloon dopo 3 secondi
         setTimeout(function () {
 
             var quote = getQuote();
@@ -15,12 +17,20 @@ $(document).ready(function () {
             template.children('.quote-text').text(quote);
 
             $('#chat').append(template);
+
         }, 3000);
 
+        var valoreInput = $('#input').val();
+        var templateInput = $('.template .quote-input').clone();
+        templateInput.children('.quote-text').text(valoreInput);
 
+        $('#chat').append(templateInput);
 
+        // svuoto al click il campo input
+        $('#input').val('');
 
     });
+
 }); //end document ready
 
 
