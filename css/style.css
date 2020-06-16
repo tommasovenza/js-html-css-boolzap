@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* impostazioni generali stile */
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -22,8 +22,9 @@ a {
 img {
     width: 100%;
 }
+/* fine impostazioni generali stile */
 
-/* clearfix */
+/* clearfix, non usato... per ora */
 .clearfix::after {
     clear: both;
     content: '';
@@ -46,7 +47,6 @@ img {
 
 /* barra laterale a sinistra con i contatti */
 .sidebar {
-    background-color: red;
     width: 350px;
     height: 95vh;
     float: left;
@@ -71,7 +71,7 @@ img {
     align-items: center;
     padding: 20px;
 }
-
+/* icona campanellina */
 .bell {
     color: #8edafc;
     width: 40px;
@@ -82,12 +82,12 @@ img {
     justify-content: center;
     align-items: center;
 }
-
+/* i link sezione notifiche */
 .advise a {
     color: #4f7485;
     font-size: 13px;
 }
-
+/* div che racchiude testi nella sezione notifiche */
 .text {
     margin-left: 10px;
     font-size: 15px;
@@ -96,6 +96,27 @@ img {
 .sidebar > .search {
     background-color: #fafafa;
     height: 60px;
+    padding: 15px;
+}
+
+.search i {
+    color: #b6b9bb;
+    font-size: 18px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.search span {
+    font-size: 14px;
+    color: #757575;
+    margin-left: 10px;
+}
+
+.search .campo-search {
+    display: inline-block;
+    background-color: #fff;
+    width: 320px;
+    margin: auto;
 }
 /* i contatti! */
 .sidebar .contacts {
@@ -136,6 +157,17 @@ img {
 .content .message {
     height: 70px;
     background-color:#f3eeea;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.content .message .area-message {
+    width: calc(100% - 200px);
+    height: 60%;
+    color: #757575;
+    border-radius: 5px;
+    background-color: #fff;
 }
 
 
