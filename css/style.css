@@ -219,9 +219,16 @@ img {
     align-items: center;
 }
 
-.content .message .area-message span {
-    margin-left: 20px;
+.content .message .area-message input {
+    width: 100%;
+    padding: 10px;
+    border: none;
 }
+
+
+/* .content .message .area-message span {
+    margin-left: 20px;
+} */
 
 
 
