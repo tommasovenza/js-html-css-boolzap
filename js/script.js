@@ -5,7 +5,7 @@ $(document).ready(function () {
         var valoreInput = $('#input').val();
 
         if (valoreInput != '') {
-            
+
             var templateInput = $('.template .quote-input').clone();
             templateInput.children('.quote-text').text(valoreInput);
 
@@ -31,7 +31,6 @@ $(document).ready(function () {
 
             }, 1500);
         }
-
 
     });
 
@@ -70,14 +69,42 @@ $(document).ready(function () {
 
             }, 1500);
 
-
-
         }
 
     });
 
+    // evento ricerca
+    $('#input-search').keyup(function() {
+
+        
+
+        $('.wrapper-contacts').each(function(){
+
+            
+            var ricerca = $('#input-search').val().toLowerCase();
+            //each --> è come un ciclo for
+            // this --> array[i];
+            var thisContactName = $(this).find('.contact-name').text().toLowerCase();
+            
+            // sfruttiamo una funzione delle stringhe
+            // se la stringa include la variabile ricerca...
+            if (thisContactName.includes(ricerca)) {
+                // allora mostro wrapper contacts
+                $(this).show();
+                // altrimenti nascondo
+            } else {
+                $(this).hide();
+            }
+    
+          });
+    });
+
+    
+
+
 }); //end document ready
 
+// funzione che crea una citazione 
 function getQuote() {
 
     var quotes = ['Molto bene, grazie. E tu?', 'de', 'dai, non c\'è male', 'de ma de', 'yessss', 'oook', 'ciao', 'sono giornate difficili', 'oooh allora??', 'che fai?', ' che si dice??', 'eh lo so'];
@@ -85,6 +112,7 @@ function getQuote() {
     return quotes[getRandomInt(0, (quotes.length))];
 }
 
+// funzione che restituisce un numero intero
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
