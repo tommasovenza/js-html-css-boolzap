@@ -236,6 +236,12 @@ img {
     padding: 13px;
     border: none;
 }
+/* fine area invio messaggi in basso */
+
+.content .template {
+    display: none;
+    position: relative;
+}
 
 .content .quote {
     padding: 20px;
@@ -248,10 +254,6 @@ img {
     border-radius: 7px;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, .3);
     margin-bottom: 10px;
-}
-
-.content .template {
-    display: none;
 }
 
 .content .quote-input {
@@ -269,9 +271,15 @@ img {
     word-wrap: break-word;
 }
 
-/* .content .message .area-message span {
-    margin-left: 20px;
-} */
+.content .quote span,
+.content .quote-input span {
+    font-size: 12px;
+    color: #757575;
+    position: relative;
+    bottom: 10px;
+    left: 190px;
+}
+
 
 
 

@@ -1,5 +1,12 @@
 $(document).ready(function () {
 
+    // trova l'ora al document ready (TODO: VALUTARE UN'ALTRA SCELTA)
+    var dt = new Date();
+    var time = dt.getHours() + ":" + dt.getMinutes();
+
+    var stampa = $('.hour').text(time);
+    console.log(stampa);
+
     $('#btn').click(function (event) {
 
         var valoreInput = $('#input').val();
@@ -74,18 +81,15 @@ $(document).ready(function () {
     });
 
     // evento ricerca
-    $('#input-search').keyup(function() {
+    $('#input-search').keyup(function () {
 
-        
+        $('.wrapper-contacts').each(function () {
 
-        $('.wrapper-contacts').each(function(){
-
-            
             var ricerca = $('#input-search').val().toLowerCase();
             //each --> è come un ciclo for
             // this --> array[i];
             var thisContactName = $(this).find('.contact-name').text().toLowerCase();
-            
+
             // sfruttiamo una funzione delle stringhe
             // se la stringa include la variabile ricerca...
             if (thisContactName.includes(ricerca)) {
@@ -95,11 +99,13 @@ $(document).ready(function () {
             } else {
                 $(this).hide();
             }
-    
-          });
+
+        });
     });
 
-    
+
+
+
 
 
 }); //end document ready
@@ -107,7 +113,7 @@ $(document).ready(function () {
 // funzione che crea una citazione 
 function getQuote() {
 
-    var quotes = ['Molto bene, grazie. E tu?', 'de', 'dai, non c\'è male', 'de ma de', 'yessss', 'oook', 'ciao', 'sono giornate difficili', 'oooh allora??', 'che fai?', ' che si dice??', 'eh lo so'];
+    var quotes = ['ok', 'ciao'];
 
     return quotes[getRandomInt(0, (quotes.length))];
 }
