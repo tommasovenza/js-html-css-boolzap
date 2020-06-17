@@ -2,32 +2,36 @@ $(document).ready(function () {
 
     $('#btn').click(function (event) {
 
-
-        // al click della tasto microfono(per ora), fa comparire la risposta in verde presa da citazioni varie
-
-        // con set timeout faccio rispondere dopo 3 secondi, ovvero faccio apparire il balloon dopo 3 secondi
-        setTimeout(function () {
-
-            var quote = getQuote();
-
-            console.log(quote);
-
-            var template = $('.template .quote').clone();
-
-            template.children('.quote-text').text(quote);
-
-            $('#chat').append(template);
-
-        }, 3000);
-
         var valoreInput = $('#input').val();
-        var templateInput = $('.template .quote-input').clone();
-        templateInput.children('.quote-text').text(valoreInput);
 
-        $('#chat').append(templateInput);
+        if (valoreInput != '') {
+            
+            var templateInput = $('.template .quote-input').clone();
+            templateInput.children('.quote-text').text(valoreInput);
 
-        // svuoto al click il campo input
-        $('#input').val('');
+            $('#chat').append(templateInput);
+
+            // svuoto al click il campo input
+            $('#input').val('');
+
+            // al click della tasto microfono(per ora), fa comparire la risposta in verde presa da citazioni varie
+
+            // con set timeout faccio rispondere dopo 3 secondi, ovvero faccio apparire il balloon dopo 3 secondi
+            setTimeout(function () {
+
+                var quote = getQuote();
+
+                console.log(quote);
+
+                var template = $('.template .quote').clone();
+
+                template.children('.quote-text').text(quote);
+
+                $('#chat').append(template);
+
+            }, 1500);
+        }
+
 
     });
 
@@ -35,9 +39,11 @@ $(document).ready(function () {
     // evento pressione tasto enter
     $(document).keypress(function (event) {
 
-        if (event.which == 13) {
+        var inputKeypress = $("#input").val();
 
-            var inputKeypress = $("#input").val();
+        if ((event.which == 13) && (inputKeypress != '')) {
+
+
             var templateInputKeypress = $('.template .quote-input').clone();
             templateInputKeypress.children('.quote-text').text(inputKeypress);
 
@@ -62,7 +68,7 @@ $(document).ready(function () {
                 //scrolla alla fine della finestra
                 $('#chat').scrollTop($('#chat').height());
 
-            }, 3000);
+            }, 1500);
 
 
 
