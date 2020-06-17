@@ -46,6 +46,9 @@ $(document).ready(function () {
             // svuoto al keypress il campo input
             $('#input').val('');
 
+            //scrolla alla fine della finestra
+            $('#chat').scrollTop($('#chat').height());
+
             setTimeout(function () {
 
                 var quote2 = getQuote();
@@ -56,7 +59,13 @@ $(document).ready(function () {
 
                 $('#chat').append(template2);
 
+                //scrolla alla fine della finestra
+                $('#chat').scrollTop($('#chat').height());
+
             }, 3000);
+
+
+
         }
 
     });
@@ -65,7 +74,7 @@ $(document).ready(function () {
 
 function getQuote() {
 
-    var quotes = ['Molto bene, grazie. E tu?', 'de', 'dai, non c\'è male', 'de ma de', 'yessss', 'oook', 'ciao', 'sono giornate difficili', 'oooh allora??', 'che fai?', ' che si dice??', 'eh lo so' ];
+    var quotes = ['Molto bene, grazie. E tu?', 'de', 'dai, non c\'è male', 'de ma de', 'yessss', 'oook', 'ciao', 'sono giornate difficili', 'oooh allora??', 'che fai?', ' che si dice??', 'eh lo so'];
 
     return quotes[getRandomInt(0, (quotes.length))];
 }

@@ -120,10 +120,19 @@ img {
 }
 /* search */
 .search .campo-search {
-    display: inline-block;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     background-color: #fff;
     width: 320px;
-    margin: auto;
+    height: 100%;
+}
+
+.search .campo-search input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    margin-left: 10px;
 }
 /* i contatti! */
 .sidebar .contacts {
