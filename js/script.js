@@ -19,7 +19,7 @@ $(document).ready(function () {
 
         if (valoreInput != '') {
 
-            var templateInput = $('.template .quote-input').clone();
+            var templateInput = $('.template .quote-input').clone(true);
             templateInput.children('.quote-text').text(valoreInput);
 
             $('.chat-container .active').append(templateInput);
@@ -36,7 +36,7 @@ $(document).ready(function () {
 
                 console.log(quote);
 
-                var template = $('.template .quote').clone();
+                var template = $('.template .quote').clone(true);
 
                 template.children('.quote-text').text(quote);
 
@@ -56,7 +56,7 @@ $(document).ready(function () {
         if ((event.which == 13) && (inputKeypress != '')) {
 
 
-            var templateInputKeypress = $('.template .quote-input').clone();
+            var templateInputKeypress = $('.template .quote-input').clone(true);
             templateInputKeypress.children('.quote-text').text(inputKeypress);
 
             $('.chat-container .active').append(templateInputKeypress);
@@ -71,7 +71,7 @@ $(document).ready(function () {
 
                 var quote2 = getQuote();
 
-                var template2 = $('.template .quote').clone();
+                var template2 = $('.template .quote').clone(true);
 
                 template2.children('.quote-text').text(quote2);
 
@@ -133,18 +133,17 @@ $(document).ready(function () {
     });
 
 
-    // funzione che rimuove ogni cosa
-    // $('.content .chat-container').mouseleave(function() {
-    //     $('.content').find('.w-drop').addClass('open');
-    // });
+    // mostro il div nascosto al click
+    $('.content .chat-container .arrow').click(function() {
+        
+        // mostro il div nascosto al click
+        var test = $(this).siblings('.w-drop').show();
 
-    // $('.content .chat-container').click(function() {
-    //     $('.content').find('.w-drop').addClass('open').parent().remove();
-    // });
-    // // $('.content .chat-container .w-drop .delete').click(function() {
-
-    //     $(this).parent().remove();
-    // });
+        // cancello al click tutto il messaggio!!
+        test.click(function() {
+            $(this).parent().remove();
+        });
+    });
   
 
 }); //end document ready

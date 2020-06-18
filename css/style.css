@@ -139,7 +139,6 @@ img {
 /* i contatti! */
 .sidebar .contacts {
     height: calc(95vh - 220px);
-    background-color: grey;
     /* non mette la barra se non devi scrollare */
     overflow-y: auto; 
     font-size: 15px;
