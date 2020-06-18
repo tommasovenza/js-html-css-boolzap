@@ -109,7 +109,7 @@ $(document).ready(function () {
         });
     });
 
-
+    
     // scrivo le funzionalità che, al click sul contatto, mostreranno le chat nascoste
 
     // quindi, al click su un contatto...
@@ -119,6 +119,12 @@ $(document).ready(function () {
         var data_c = $(this).attr('data-c');
         // console.log(data_c);
 
+        // aggiungo colore di sfondo alla chat attiva!
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+
+        
+
         // rimuovo la classe active dalla chat corrente, per non mostrarla più
         $('.chat-container .chat').removeClass('active');
 
@@ -127,6 +133,9 @@ $(document).ready(function () {
         $(selettore).addClass('active');
 
     });
+
+
+  
 
 }); //end document ready
 

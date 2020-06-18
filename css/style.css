@@ -152,6 +152,10 @@ img {
     padding: 15px;
     background-color: #e9ebeb;
 }
+.sidebar .contacts .wrapper-contacts.active {
+    background-color: #7a7a7a;
+}
+
 
 .contacts-text {
     display: flex;
@@ -297,6 +301,7 @@ img {
     left: 215px;
     display: none;
     color: #757575;
+    z-index: 1;
 }
 
 .content .quote:hover .fa-chevron-down, .content .quote-input:hover .fa-chevron-down{
@@ -322,7 +327,7 @@ img {
 }
 
 .content .w-drop a:hover {
-    color: black;
+    color: #000;
 }
 
 .content .w-drop.open {
