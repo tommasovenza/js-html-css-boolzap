@@ -62,7 +62,7 @@
                 <!-- sezione principale con i contatti -->
                 <div class="contacts">
                     <!-- contatto uno -->
-                    <div class="wrapper-contacts">
+                    <div data-c="0" class="wrapper-contacts">
                         <img src="img/avatar_1.jpg" alt="icona">
                         <div class="contacts-text">
                             <span class="contact-name">Michele</span>
@@ -72,7 +72,7 @@
                         <span class="ot-color">17.53</span>
                     </div>
                     <!-- contatto due -->
-                    <div class="wrapper-contacts">
+                    <div data-c="1" class="wrapper-contacts">
                         <img src="img/avatar_2.jpg" alt="icona">
                         <div class="contacts-text">
                             <span class="contact-name">Fabio</span>
@@ -82,7 +82,7 @@
                         <span class="ot-color">17.53</span>
                     </div>
                     <!-- contatto tre -->
-                    <div class="wrapper-contacts">
+                    <div data-c="2" class="wrapper-contacts">
                         <img src="img/avatar_3.jpg" alt="icona">
                         <div class="contacts-text">
                             <span class="contact-name">Alessandro B.</span>
@@ -92,7 +92,7 @@
                         <span class="ot-color">17.53</span>
                     </div>
 
-                    <div class="wrapper-contacts">
+                    <div data-c="3" class="wrapper-contacts">
                         <img src="img/avatar_4.jpg" alt="icona">
                         <div class="contacts-text">
                             <span class="contact-name">Alessandro L.</span>
@@ -102,7 +102,7 @@
                         <span class="ot-color">17.53</span>
                     </div>
 
-                    <div class="wrapper-contacts">
+                    <div data-c="4" class="wrapper-contacts">
                         <img src="img/avatar_5.jpg" alt="icona">
                         <div class="contacts-text">
                             <span class="contact-name">Samuele</span>
@@ -112,7 +112,7 @@
                         <span class="ot-color">17.53</span>
                     </div>
 
-                    <div class="wrapper-contacts">
+                    <div data-c="5" class="wrapper-contacts">
                         <img src="img/avatar_6.jpg" alt="icona">
                         <div class="contacts-text">
                             <span class="contact-name">Claudia</span>
@@ -122,7 +122,7 @@
                         <span class="ot-color">17.53</span>
                     </div>
 
-                    <div class="wrapper-contacts">
+                    <div data-c="6" class="wrapper-contacts">
                         <img src="img/avatar_7.jpg" alt="icona">
                         <div class="contacts-text">
                             <span class="contact-name">Davide</span>
@@ -132,7 +132,7 @@
                         <span class="ot-color">17.53</span>
                     </div>
 
-                    <div class="wrapper-contacts">
+                    <div data-c="7" class="wrapper-contacts">
                         <img src="img/avatar_8.jpg" alt="icona">
                         <div class="contacts-text">
                             <span class="contact-name">Federico</span>
@@ -163,29 +163,78 @@
                     </ul>
 
                 </div>
+
                 <!-- la chat, il corpo dell'applicazione -->
-                <div class="chat" id="chat">
+                <div class="chat-container">
+                    <!-- chat 00 -->
+                    <div data-c-target="0" class="chat active">
 
-                    <div class="template">
-                        <figure class="quote">
-
-                            <span class="hour"></span>
-                            <blockquote class="quote-text">
-                               
-                            </blockquote>
-                        </figure>
+                        <div class="template">
+                            <figure class="quote">
+    
+                                <span class="hour"></span>
+                                <blockquote class="quote-text">
+                                   
+                                </blockquote>
+                            </figure>
+                        </div>
+    
+                        <div class="template">
+                            <figure class="quote-input">
+    
+                                <span class="hour"></span>
+                                <blockquote class="quote-text">
+                              
+                                </blockquote>
+                            </figure>
+                        </div>
                     </div>
 
-                    <div class="template">
-                        <figure class="quote-input">
+                    <!-- chat 01 -->
+                    <div data-c-target="1" class="chat">
 
-                            <span class="hour"></span>
-                            <blockquote class="quote-text">
-                          
-                            </blockquote>
-                        </figure>
+                       
                     </div>
+
+                    <!-- chat 02 -->
+                    <div data-c-target="2" class="chat">
+
+                     
+                    </div>
+
+                    <!-- chat 03 -->
+                    <div data-c-target="3" class="chat">
+
+                        
+                    </div>
+
+                    <!-- chat 04 -->
+                    <div data-c-target="4" class="chat">
+
+                    
+                    </div>
+
+                    <!-- chat 05 -->
+                    <div data-c-target="5" class="chat">
+
+                    
+                    </div>
+
+                    <!-- chat 06 -->
+                    <div data-c-target="6" class="chat">
+
+                    </div>
+
+                    <!-- chat 07 -->
+                    <div data-c-target="7" class="chat">
+
+                  
+                    </div>
+                    <!-- fine chat 7 -->
                 </div>
+                    <!-- fine contenitore chat -->
+
+
                 <!-- sezione invio messaggi -->
                 <div class="message">
                     <i class="far fa-smile"></i>

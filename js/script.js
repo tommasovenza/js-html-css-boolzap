@@ -1,12 +1,18 @@
+// TODO --------------------------------> CAMBIARE TUTTI I #chat che identificano la chat corrente. (altrimenti non vedrò più i balloon)
+// riga 25, 43, 62, 68, 78, 81
 $(document).ready(function () {
 
     // trova l'ora al document ready (TODO: VALUTARE UN'ALTRA SCELTA)
     var dt = new Date();
-    var time = dt.getHours() + ":" + dt.getMinutes();
+    var ore = dt.getHours() 
+    var min = dt.getMinutes();
 
-    var stampa = $('.hour').text(time);
-    console.log(stampa);
+    var oraCorrente = addZero(ore) + ':' + addZero(min);
+    
+    $('.hour').text(oraCorrente);
+    
 
+    // evento click sul bottone fondo pagina a destra
     $('#btn').click(function (event) {
 
         var valoreInput = $('#input').val();
@@ -16,7 +22,7 @@ $(document).ready(function () {
             var templateInput = $('.template .quote-input').clone();
             templateInput.children('.quote-text').text(valoreInput);
 
-            $('#chat').append(templateInput);
+            $('.chat-container .active').append(templateInput);
 
             // svuoto al click il campo input
             $('#input').val('');
@@ -34,7 +40,7 @@ $(document).ready(function () {
 
                 template.children('.quote-text').text(quote);
 
-                $('#chat').append(template);
+                $('.chat-container .active').append(template);
 
             }, 1500);
         }
@@ -53,13 +59,13 @@ $(document).ready(function () {
             var templateInputKeypress = $('.template .quote-input').clone();
             templateInputKeypress.children('.quote-text').text(inputKeypress);
 
-            $('#chat').append(templateInputKeypress);
+            $('.chat-container .active').append(templateInputKeypress);
 
             // svuoto al keypress il campo input
             $('#input').val('');
 
             //scrolla alla fine della finestra
-            $('#chat').scrollTop($('#chat').height());
+            $('.chat-container .active').scrollTop($('.chat-container .active').height());
 
             setTimeout(function () {
 
@@ -69,10 +75,10 @@ $(document).ready(function () {
 
                 template2.children('.quote-text').text(quote2);
 
-                $('#chat').append(template2);
+                $('.chat-container .active').append(template2);
 
                 //scrolla alla fine della finestra
-                $('#chat').scrollTop($('#chat').height());
+                $('.chat-container .active').scrollTop($('.chat-container .active').height());
 
             }, 1500);
 
@@ -104,9 +110,23 @@ $(document).ready(function () {
     });
 
 
+    // scrivo le funzionalità che, al click sul contatto, mostreranno le chat nascoste
 
+    // quindi, al click su un contatto...
+    $('.wrapper-contacts').click(function() {
 
+        // ...vado a prenderne l'attributo
+        var data_c = $(this).attr('data-c');
+        console.log(data_c);
 
+        // rimuovo la classe active dalla chat corrente, per non mostrarla più
+        $('.chat-container .chat').removeClass('active');
+
+        // aggiungo la classe active alla chat che ha come attributo data-c-target (mostrando quindi la corretta chat)
+        var selettore = '.chat-container div[data-c-target="' + data_c + '"]';
+        $(selettore).addClass('active');
+
+    });
 
 }); //end document ready
 
@@ -124,3 +144,12 @@ function getRandomInt(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min; //Il max è escluso e il min è incluso
 }
+
+// funzone che aggiunge zero
+
+function addZero(i) {
+    if (i < 10) {
+      i = "0" + i;
+    }
+    return i;
+  }
