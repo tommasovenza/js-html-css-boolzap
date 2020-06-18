@@ -123,8 +123,6 @@ $(document).ready(function () {
         $(this).siblings().removeClass('active');
         $(this).addClass('active');
 
-        
-
         // rimuovo la classe active dalla chat corrente, per non mostrarla più
         $('.chat-container .chat').removeClass('active');
 
@@ -135,6 +133,18 @@ $(document).ready(function () {
     });
 
 
+    // funzione che rimuove ogni cosa
+    // $('.content .chat-container').mouseleave(function() {
+    //     $('.content').find('.w-drop').addClass('open');
+    // });
+
+    // $('.content .chat-container').click(function() {
+    //     $('.content').find('.w-drop').addClass('open').parent().remove();
+    // });
+    // // $('.content .chat-container .w-drop .delete').click(function() {
+
+    //     $(this).parent().remove();
+    // });
   
 
 }); //end document ready
