@@ -1,5 +1,3 @@
-// TODO --------------------------------> CAMBIARE TUTTI I #chat che identificano la chat corrente. (altrimenti non vedrò più i balloon)
-// riga 25, 43, 62, 68, 78, 81
 $(document).ready(function () {
 
     // trova l'ora al document ready (TODO: VALUTARE UN'ALTRA SCELTA)
@@ -151,7 +149,10 @@ $(document).ready(function () {
 // funzione che crea una citazione 
 function getQuote() {
 
-    var quotes = ['ok', 'ciao'];
+    var quotes = ['ok', 'ciao', "S'ha a dì d'andà?", 'Senza lilleri un si lallera', 'Oh bischero!', 
+    "Oh che l'abbozzi?!", 'Si leva la sete col prosciutto!', "E ruba i’ffumo alle schiacciahe", 
+    'vieni, de', 'de ma de', 'oh un lo so', 'cencio dice male di straccio', ' boia de', 'oh brodo', 
+    'oh ti cheti', 'ciaooo'];
 
     return quotes[getRandomInt(0, (quotes.length))];
 }

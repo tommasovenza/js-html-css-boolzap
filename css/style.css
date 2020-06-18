@@ -152,7 +152,8 @@ img {
     background-color: #e9ebeb;
 }
 .sidebar .contacts .wrapper-contacts.active {
-    background-color: #7e837c;
+    background-color: #FA4A2F;
+    color: #fff;
 }
 
 .contacts-text {
@@ -233,15 +234,16 @@ img {
     width: calc(100% - 200px);
     height: 60%;
     color: #757575;
-    border-radius: 5px;
+    border-radius: 30px;
     background-color: #fff;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 .content .message .area-message input {
-    width: 100%;
-    padding: 13px;
+    width: 95%;
+    padding: 10px;
     border: none;
 }
 /* fine area invio messaggi in basso */
