@@ -117,7 +117,7 @@ $(document).ready(function () {
 
         // ...vado a prenderne l'attributo
         var data_c = $(this).attr('data-c');
-        console.log(data_c);
+        // console.log(data_c);
 
         // rimuovo la classe active dalla chat corrente, per non mostrarla più
         $('.chat-container .chat').removeClass('active');
@@ -146,7 +146,6 @@ function getRandomInt(min, max) {
 }
 
 // funzone che aggiunge zero
-
 function addZero(i) {
     if (i < 10) {
       i = "0" + i;
