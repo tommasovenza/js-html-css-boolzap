@@ -180,6 +180,7 @@ img {
     padding: 20px;
 }
 /* TODO: questa sezione ho scritto velocemente */
+
 .content i {
     font-size: 20px;
 }
@@ -261,21 +262,21 @@ img {
     background-color: #fff;
     color: #000;
     border-radius: 7px;
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, .3);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, .1);
     margin-bottom: 10px;
 }
 
 .content .quote-input {
     padding: 20px;
     margin-top: 30px;
-    margin-right: 180px!important;
+    margin-right: 30px!important;
     margin-left: auto; 
     width: 250px;
     background-color: #d5f9d5;
     color: #000;
     margin-right: 0;
     border-radius: 7px;
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, .3);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, .1);
     margin-bottom: 10px;
     word-wrap: break-word;
 }
@@ -302,6 +303,30 @@ img {
     display: flex;
 }
 
+.content .w-drop {
+    position: absolute;
+    background-color: #fff;
+    width: 150px;
+    height: 70px;
+    padding: 15px;
+    top: 50px;
+    right: 15px;
+    border-radius: 5px;
+    display: none;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, .1);
+}
 
+.content .w-drop a {
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.content .w-drop a:hover {
+    color: black;
+}
+
+.content .w-drop.open {
+    display: block;
+}
 
 
