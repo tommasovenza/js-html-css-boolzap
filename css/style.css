@@ -206,6 +206,11 @@ img {
     background-image: url(../img/wallpaper.jpg);
     /* anche questa barra dovrà scrollare  */
     overflow-y: auto;
+    display: none;
+}
+
+.content .chat.active {
+    display: block;
 }
 /* barra in basso con invio messaggi */
 .content .message {
