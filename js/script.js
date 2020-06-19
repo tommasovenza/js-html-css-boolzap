@@ -63,7 +63,7 @@ $(document).ready(function () {
             $('#input').val('');
 
             //scrolla alla fine della finestra
-            $('.chat-container .active').scrollTop($('.chat-container .active').height());
+            $('.chat-container .active').scrollTop($('.chat-container .active').prop('scrollHeight'));
 
             setTimeout(function () {
 
@@ -76,7 +76,7 @@ $(document).ready(function () {
                 $('.chat-container .active').append(template2);
 
                 //scrolla alla fine della finestra
-                $('.chat-container .active').scrollTop($('.chat-container .active').height());
+                $('.chat-container .active').scrollTop($('.chat-container .active').prop('scrollHeight'));
 
             }, 1500);
 
@@ -128,6 +128,7 @@ $(document).ready(function () {
         var selettore = '.chat-container div[data-c-target="' + data_c + '"]';
         $(selettore).addClass('active');
 
+        // cambio immagini e testi nell'header alla selezione del contatto
         var contactName = $(this).find('.contact-name').text();
         var contactImage = $(this).find('img').attr('src');
         var currentChatContact = $('.current-chat-contact');
@@ -161,11 +162,7 @@ $(document).ready(function () {
 // funzione che crea una citazione 
 function getQuote() {
 
-    var quotes = ['ok', 'ciao', "S'ha a dì d'andà?", 'Senza lilleri un si lallera', 'Oh bischero!', 
-    "Oh che l'abbozzi?!", 'Si leva la sete col prosciutto!', "E ruba i’ffumo alle schiacciahe", 
-    'vieni, de', 'de ma de', 'oh un lo so', 'cencio dice male di straccio', ' boia de', 'oh brodo', 
-    'oh ti cheti', 'ciaooo'];
-
+    var quotes = ['ok', 'ciao'];
     return quotes[getRandomInt(0, (quotes.length))];
 }
 
@@ -183,3 +180,8 @@ function addZero(i) {
     }
     return i;
   }
+
+  // "S'ha a dì d'andà?", 'Senza lilleri un si lallera', 'Oh bischero!', 
+  // "Oh che l'abbozzi?!", 'Si leva la sete col prosciutto!', "E ruba i’ffumo alle schiacciahe", 
+  // 'vieni, de', 'de ma de', 'oh un lo so', 'cencio dice male di straccio', ' boia de', 'oh brodo', 
+  // 'oh ti cheti', 'ciaooo'
