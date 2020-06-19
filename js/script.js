@@ -134,14 +134,18 @@ $(document).ready(function () {
     // mostro il div nascosto al click
     $('.content .chat-container .arrow').click(function() {
         
-        // mostro il div nascosto al click
-        var test = $(this).siblings('.w-drop').show();
-
-        // cancello al click tutto il messaggio!!
-        test.click(function() {
-            $(this).parent().remove();
-        });
+        // rimuovo al click su un messaggio, gli altri messaggi
+        $(this).parent().parent().find('.w-drop').removeClass('open');
+        // mostro il div nascosto al click, facendo il toggle di classe .open
+        var test = $(this).siblings('.w-drop').toggleClass('open');
+        
     });
+
+    // quando clicco sulla classe delete rimuovo l'intero messaggio, rimuovendo dal DOM l'elemento figure
+    $('.delete').click(function() {
+        $(this).closest('figure').remove();
+    });
+
   
 
 }); //end document ready
