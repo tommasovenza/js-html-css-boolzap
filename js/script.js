@@ -128,6 +128,14 @@ $(document).ready(function () {
         var selettore = '.chat-container div[data-c-target="' + data_c + '"]';
         $(selettore).addClass('active');
 
+        var contactName = $(this).find('.contact-name').text();
+        var contactImage = $(this).find('img').attr('src');
+        var currentChatContact = $('.current-chat-contact');
+        console.log(contactImage);
+        console.log(contactName);
+
+        currentChatContact.find('.da-cambiare').text(contactName);
+        currentChatContact.find('img').attr('src', contactImage);
     });
 
 
@@ -137,7 +145,7 @@ $(document).ready(function () {
         // rimuovo al click su un messaggio, gli altri messaggi
         $(this).parent().parent().find('.w-drop').removeClass('open');
         // mostro il div nascosto al click, facendo il toggle di classe .open
-        var test = $(this).siblings('.w-drop').toggleClass('open');
+        $(this).siblings('.w-drop').toggleClass('open');
         
     });
 
